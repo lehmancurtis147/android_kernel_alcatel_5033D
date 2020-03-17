@@ -77,7 +77,7 @@ kernel-menuconfig:
 	$(hide) mkdir -p $(KERNEL_OUT)
 	$(MAKE) -C $(KERNEL_DIR) $(KERNEL_MAKE_OPTION) menuconfig
 
-%config-kernel:
+config-kernel:
 	$(hide) mkdir -p $(KERNEL_OUT)
 	$(MAKE) -C $(KERNEL_DIR) $(KERNEL_MAKE_OPTION) $(patsubst %config-kernel,%config,$@)
 
